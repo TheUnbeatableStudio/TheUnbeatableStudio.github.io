@@ -17,7 +17,7 @@ const titleContainer = document.querySelector(".title-container");
 
 const starCount = 250;
 
-for (let i = 0; i < starCount; 1++) {
+for (let i = 0; i < starCount; i++) {
 
   const star = document.createElement("div");
 
@@ -42,9 +42,14 @@ for (let i = 0; i < starCount; 1++) {
 
 function closeMenu() {
 
-  sodeMenu.classList.remove("open");
+  sideMenu.classList.remove("open");
 
 menuOverlay.classList.remove("open");
+}
+
+function openMenu() {
+    sideMenu.classList.add("open");
+    menuOverlay.classList.add("open");
 }
 
 menuButton.addEventListener("click", openMenu);
@@ -57,7 +62,7 @@ menuOverlay.addEventListener("click", closeMenu);
     ENTER BUTTON
 ------------------------------------*/
 
-enterButton.addEventListener("click", () = {
+enterButton.addEventListener("click", () => {
 
   titleContainer.style.opacity = "0";
   titleContainer.style.transform = "scale(1.05)";
