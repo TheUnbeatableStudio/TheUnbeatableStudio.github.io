@@ -11,7 +11,7 @@ const menuOverlay = document.getElementById("menu-overlay");
 const enterButton = document.getElementById("enter-button");
 const titleContainer = document.querySelector(".title-container");
 
-const galaxyfield = document.getElementById("galaxy-field");
+const galaxyField = document.getElementById("galaxy-field");
 
 /*-----------------------------------
     CREATE STARS
