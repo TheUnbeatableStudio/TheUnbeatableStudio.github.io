@@ -389,20 +389,22 @@ h1 {
 .galaxy-label {
   position: absolute;
 
+  left: 50%;
   top: 100%;
-  left: 50%
+
+  margin-top: 12px;
 
   transform: translateX(-50%);
 
-  margin-top: 1rem;
-
+  color: white;
   font-size: 0.7rem;
   letter-spacing: 0.25rem;
 
-  color: white;
+  white-space: nowrap;
+
   opacity: 0;
 
-  white-space: nowrap;
+  pointer-events: none;
 
   transition: opacity 0.3s ease;
 }
