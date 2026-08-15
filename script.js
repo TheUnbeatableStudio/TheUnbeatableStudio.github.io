@@ -1,3 +1,5 @@
+console.log("TUSK website JavaScript is working!");
+
 const starfield = document.getElementById("starfield");
 
 const menuButton = document.getElementById("menu-button");
