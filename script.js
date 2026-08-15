@@ -69,7 +69,7 @@ enterButton.addEventListener("click", () => {
     titleContainer.style.opacity = "0";
     titleContainer.style.transform = "scale(1.05)";
 
-    galaxyField.classList.add("activate");
+    galaxyField.classList.add("active");
 
 });
 
