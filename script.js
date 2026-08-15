@@ -11,6 +11,8 @@ const menuOverlay = document.getElementById("menu-overlay");
 const enterButton = document.getElementById("enter-button");
 const titleContainer = document.querySelector(".title-container");
 
+const galaxyfield = document.getElementById("galaxy-field");
+
 /*-----------------------------------
     CREATE STARS
 ------------------------------------*/
@@ -66,6 +68,8 @@ enterButton.addEventListener("click", () => {
 
   titleContainer.style.opacity = "0";
   titleContainer.style.transform = "scale(1.05)";
+
+    galaxyField.classList.add("active");
 
 });
 
