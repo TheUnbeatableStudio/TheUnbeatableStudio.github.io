@@ -315,10 +315,10 @@ h1 {
 
   overflow: hidden;
 
-  opacity: 0;
-  pointer-events: none;
+  opacity: 1 !important;
+  pointer-events: auto;
 
-  transform: scale(1.15);
+  transform: scale(1);
 
   transition:
     opacity 1.5s ease,
