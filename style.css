@@ -1,0 +1,345 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background: #02030a;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*-----------------------------------
+    STARFIELD
+------------------------------------*/
+
+#starfield {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at center, #10152c 0%, #050713 45%, #02030a 100%);
+  z-index: -2;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle infinate ease-in-out;
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+/*-----------------------------------
+    LANDING SCREEN
+------------------------------------*/
+
+#home {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.title-container {
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.studio-name {
+  font-size: 0.9rem;
+  letter-spacing: 0.35rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.75;
+}
+
+h1 {
+  font-size: clamp(4rem, 12vw, 9rem);
+  letter-spacing: 1rem;
+  margin-right: -1rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
+  opacity: 0.7;
+  margin-top: 1rem;
+}
+
+/*-----------------------------------
+    ENTER BUTTON
+------------------------------------*/
+
+#enter-button {
+  margin-top: 3rem;
+
+  padding: 0.9rem 3rem;
+
+  background: transparent;
+  color: white;
+
+  border: 1px solid rgba(255, 255, 255, 0.6);
+
+  font-size: 0.85rem;
+  letter-spacing: 0.3rem;
+
+  curser: pointer;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+#enter-button:hover {
+  background: white;
+  color:black;
+  transforms: scale(1.05);
+}
+
+/*-----------------------------------
+    MENU BUTTON
+------------------------------------*/
+
+#menu-button {
+  position: fixed;
+
+  top: 2rem;
+  right: 2rem;
+
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  curser: pointer;
+
+  z-index: 10;
+
+  transition: background 0.3s ease;
+}
+
+#menu-button:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+#menu-button span {
+  width: 20px;
+  height: 1px;
+  background: white;
+}
+
+/*-----------------------------------
+    SIDE MENU
+------------------------------------*/
+
+#side-menu {
+  position: fixed;
+
+  top: 0;
+  right: 0;
+
+  width: min(360px, 85vw);
+  height: 100vh;
+
+  padding: 5rem 3rem;
+
+  background: rgba(5, 7, 18, 0.97);
+
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+
+  transform: translateX(100%);
+
+  transition: transform 0.45s ease;
+
+  z-index: 20;
+}
+
+#side-menu.open {
+  transform: translateX(0);
+}
+
+#close-menu {
+  position: absolute;
+
+  top: 1.5rem;
+  right: 2rem;
+
+  background: none;
+  border: none;
+
+  color: white;
+
+  font-size: 2rem;
+
+  curser: pointer;
+}
+
+#side-menu h2 {
+  font-size: 1.4rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+
+  margin-bottom: 2rem;
+}
+
+#side-menu h3 {
+  font-size: 0.8rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+
+  opacity: 0.6;
+
+  margin-bottom: 1rem;
+}
+
+#side-menu nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#side-menu a {
+  color: white;
+  text-decoration: none;
+
+  font-size: 1rem;
+
+  opacity: 0.75;
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+#side-menu a:hover {
+  opacity: 1;
+  transform: 1px;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  margin: 3rem 0;
+}
+
+/*-----------------------------------
+    MENU OVERLAY
+------------------------------------*/
+
+#menu-overlay {
+  position: fixed;
+
+  inset: 0;
+  
+  background: rgba(0, 0, 0, 0.5);
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 0.45s ease;
+
+  z-index: 15;
+}
+
+#menu-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/*-----------------------------------
+    MOBILE
+------------------------------------*/
+
+@media (max-width: 600px) {
+
+  .studio-name {
+    font-size: 0.65rem;
+    letter-spacing: 0.2rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+    letter-spacing: 0.5rem;
+  }
+
+  #menu-button {
+    top: 1rem;
+    right: 1rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
