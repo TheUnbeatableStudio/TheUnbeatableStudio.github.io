@@ -66,10 +66,10 @@ menuOverlay.addEventListener("click", closeMenu);
 
 enterButton.addEventListener("click", () => {
 
-  titleContainer.style.opacity = "0";
-  titleContainer.style.transform = "scale(1.05)";
+    titleContainer.style.opacity = "0";
+    titleContainer.style.transform = "scale(1.05)";
 
-    galaxyField.classList.add("active");
+    galaxyField.classList.add("activate");
 
 });
 
