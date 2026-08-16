@@ -416,7 +416,7 @@ h1 {
 #kumo-container .galaxy-label {
   position: absolute;
 
-  top: 90%;
+  top: 90px;
   left: 46%;
 
   transform: translateX(-50%);
