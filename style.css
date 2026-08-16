@@ -386,30 +386,45 @@ h1 {
     GALAXY LABELS
 ------------------------------------*/
 
-.galaxy-label {
+.galaxy-container {
+  position: absolute;
+}
+
+#kumo-container {
+  top: 25%;
+  left: 30%;
+}
+
+#kumo-container .galaxy {
+  position: relative;
+  top: auto;
+  left: auto;
+}
+
+#kumo-container .galaxy-label {
   position: absolute;
 
-  left: 50%;
-  top: 100%;
+  top: 100%
+  left: 50%
+
+  transform: translateX(-50);
 
   margin-top: 12px;
 
-  transform: translateX(-50%);
-
   color: white;
+
   font-size: 0.7rem;
   letter-spacing: 0.25rem;
 
   white-space: nowrap;
 
   opacity: 0;
-
   pointer-events: none;
 
   transition: opacity 0.3s ease;
 }
 
-.galaxy:hover .galaxy-label {
+#kumo-container:hover .galaxy-label {
   opacity: 0.8;
 }
 
