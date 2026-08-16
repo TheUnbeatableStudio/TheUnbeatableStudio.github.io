@@ -394,25 +394,32 @@ h1 {
 }
 
 #kumo-container {
+  position: absolute;
+  
   top: 25%;
   left: 30%;
+
+  width: 90px;
+  height: 90px;
 }
 
 #kumo-container .galaxy {
-  position: relative;
+  position: absolute;
+  
   top: 0;
   left: 0;
+
+  width: 90px
+  height: 90px;
 }
 
 #kumo-container .galaxy-label {
   position: absolute;
 
-  top: 100%
-  left: 50%
+  top: 90%;
+  left: 45%;
 
   transform: translateX(-50);
-
-  margin-top: 12px;
 
   color: white;
 
