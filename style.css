@@ -419,7 +419,7 @@ h1 {
   top: 90%;
   left: 46%;
 
-  transform: translateX(-50);
+  transform: translateX(-50%);
 
   color: white;
 
