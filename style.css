@@ -388,6 +388,9 @@ h1 {
 
 .galaxy-container {
   position: absolute;
+
+  width: 90px;
+  height: 90px;
 }
 
 #kumo-container {
@@ -397,8 +400,8 @@ h1 {
 
 #kumo-container .galaxy {
   position: relative;
-  top: auto;
-  left: auto;
+  top: 0;
+  left: 0;
 }
 
 #kumo-container .galaxy-label {
